@@ -1,0 +1,155 @@
+/* Game.css */
+
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #4e54c8, #8f94fb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.game-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.start-game,
+.game {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h1, h2, h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #4e54c8;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type='text']:focus {
+  border-color: #8f94fb;
+}
+
+button {
+  background-color: #4e54c8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+button:hover {
+  background-color: #8f94fb;
+  transform: scale(1.05);
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.congratulations {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: popupFadeIn 0.5s ease-in;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.popup h3 {
+  margin-bottom: 15px;
+  color: #333;
+  font-weight: bold;
+}
+
+.popup button {
+  background-color: #4e54c8;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.popup button:hover {
+  background-color: #8f94fb;
+}
+
+@keyframes popupFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  h1, h2, h3 {
+    font-size: 24px;
+  }
+
+  input[type='text'],
+  button {
+    font-size: 14px;
+  }
+
+  .game-container {
+    padding: 20px;
+  }
+}
